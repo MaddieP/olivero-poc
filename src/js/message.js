@@ -1,10 +1,9 @@
 (function() {
-    var closeBtn = document.getElementsByClassName("close");
-    var i;
+    const closeBtn = document.querySelectorAll(".messages__close");
 
-    for (i = 0; i < closeBtn.length; i++) {
-        closeBtn[i].addEventListener("click", function() {
-            this.parentElement.style.display = 'none';
-        });
-    }
+    closeBtn.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        this.parentElement.style.display = 'none';
+      })
+    })
 })();
